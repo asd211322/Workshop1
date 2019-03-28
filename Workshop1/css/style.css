@@ -95,7 +95,7 @@ main{
     line-height: 50px;
 }
 
-.book-grid-toolbar input{
+.book-grid-toolbar_input{
     color:white;
     background: #3343a4;
     border:none;
