@@ -63,12 +63,12 @@ main{
     padding: 0;
 }
 
-.fieldlist li {
+.fieldlist_li {
     list-style: none;
     padding-bottom: 10px;
 }
 
-.fieldlist label {
+.fieldlist_label {
     display: block;
     padding-bottom: 1px;
     text-transform: uppercase;
@@ -95,7 +95,7 @@ main{
     line-height: 50px;
 }
 
-.book-grid-toolbar_input{
+.book-grid-toolbar input{
     color:white;
     background: #3343a4;
     border:none;
