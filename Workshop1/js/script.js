@@ -32,8 +32,8 @@ $("#add_book").click(function () {
     }
 
     add_window.kendoWindow({
-        width: "600px",
-        title: "About Alvar Aalto",
+        width: 800,
+        title: "新增書籍",
         visible: false,
         actions: [
             "Pin",
@@ -44,6 +44,15 @@ $("#add_book").click(function () {
         close: onClose
     }).data("kendoWindow").center().open();
 });
+
+//換圖片
+$(document).ready(function () {
+    $("#book_category").change(function () {
+        $(".book-image").attr("src", "image/" + $('#book_category').val() + ".jpg");
+    });
+});
+
+
 $(document).ready(function () {
     $("#book_grid").kendoGrid({
         dataSource: {
@@ -74,7 +83,7 @@ $(document).ready(function () {
             { field: "BookDeliveredDate", title: "送達<br>狀態", width: 15 },
             { field: "BookPrice", title: "金額", width: 15, format: "{0:N0}"/*千分位*/, attributes: { "class": "right-align", style: "text-align: right" }/*靠右顯示*/ },
             { field: "BookAmount", title: "數量", width: 15, format: "{0:N0}", attributes: { "class": "right-align", style: "text-align: right" } },
-            { field: "BookTotal", title: "總計", width: 20, format: "{0:N0}", attributes: { "class": "right-align", style: "text-align: right" } }
+            { field: "BookTotal", title: "總計", width: 20, format: "{0:N0}元", attributes: { "class": "right-align", style: "text-align: right" } }
         ]
     });
     $("#search_book").keyup(function () {   /*連動式查詢 */
